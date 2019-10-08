@@ -1,0 +1,10 @@
+<div class="jumbotron" *ngIf="book">
+    <hr>
+    <h1 class="display-4">{{ book.bookName }}</h1>
+    <p class="lead">by: {{book.bookAuthor}}</p>
+    <hr class="my-4">
+    <p>{{book.bookDescription}}</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" [routerLink]="['/addcomment', book.id]" >Add review</a>
+    </p>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Add comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bk of book; index as bookId">
+                    <td>{{bk.bookName}}</td>
+                    <td>{{bk.bookAuthor}}</td>
+                    <td><a class="btn btn-primary text-white" [routerLink]="['/viewbook',bookId]">View Book</a>
+                        <a class="btn btn-success text-white" [routerLink]="['/viewallreviews']" >View all reviews</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

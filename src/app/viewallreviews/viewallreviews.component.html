@@ -1,0 +1,11 @@
+<div class="jumbotron" *ngFor="let comment of books">
+    <hr>
+    <h1 class="display-4">Reviews!</h1><br>
+    <h1 class="display-4">{{ books.comment.usercomments[userName] }}</h1>
+    <p class="lead">email: {{books.comment.usercomments[email]}}</p>
+    <hr class="my-4">
+    <p>{{books.comment.usercomments[comment]}}</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" [routerLink]="['viewallreviews']" >Add review</a>
+    </p>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Add Review</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <form (ngSubmit)="createComment()">
+                <div class="form-group">
+                    <label for="myinput">Username:</label>
+                    <input type="text" class="form-control" name="userName" [(ngModel)]="userName">
+                </div>
+                <div class="form-group">
+                    <label for="myinput">Email:</label>
+                    <input type="email" class="form-control" name="email" [(ngModel)]="email">
+                </div>
+                <div class="form-group">
+                    <label for="myinput">Add Comment:</label>
+                    <textarea class="form-control" rows="5"  name="comment" [(ngModel)]="comment" placeholder="Give review here.."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button><button type="submit" class="btn btn-primary" [routerLink]="['/booklist']" routerLinkActive="router-link-active" >Back to home</button>
+            </form>
+        </div>
+    </div>
+</div>
